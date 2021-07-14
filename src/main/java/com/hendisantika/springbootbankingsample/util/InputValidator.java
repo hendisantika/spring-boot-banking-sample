@@ -23,4 +23,16 @@ public class InputValidator {
         return sortCodePattern.matcher(accountInput.getSortCode()).find() &&
                 accountNumberPattern.matcher(accountInput.getAccountNumber()).find();
     }
+
+    public static boolean isSearchTransactionValid(TransactionInput transactionInput) {
+        // TODO Add checks for large amounts; consider past history of account holder and location of transfers
+
+        if (!isSearchCriteriaValid(transactionInput.getSourceAccount()))
+            return false;
+
+        if (!isSearchCriteriaValid(transactionInput.getTargetAccount()))
+            return false;
+
+        return !transactionInput.getSourceAccount().equals(transactionInput.getTargetAccount());
+    }
 }
