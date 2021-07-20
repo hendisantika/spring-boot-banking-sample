@@ -68,4 +68,9 @@ public class TransactionService {
         account.setCurrentBalance((account.getCurrentBalance() - amount));
         accountRepository.save(account);
     }
+
+    // TODO support overdrafts or credit account
+    private boolean isAmountAvailable(double amount, double accountBalance) {
+        return (accountBalance - amount) > 0;
+    }
 }
