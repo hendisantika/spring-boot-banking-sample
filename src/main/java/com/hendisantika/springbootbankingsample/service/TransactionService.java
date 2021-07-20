@@ -63,4 +63,9 @@ public class TransactionService {
         }
         return false;
     }
+
+    private void updateAccountBalance(Account account, double amount) {
+        account.setCurrentBalance((account.getCurrentBalance() - amount));
+        accountRepository.save(account);
+    }
 }
