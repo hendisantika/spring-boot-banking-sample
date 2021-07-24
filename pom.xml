@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hendisantika</groupId>
-    <artifactId>spring-boot-banking-sample</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>banking</artifactId>
+    <version>0.0.1</version>
     <name>spring-boot-banking-sample</name>
     <description>Demo project for Spring Boot</description>
     <properties>
